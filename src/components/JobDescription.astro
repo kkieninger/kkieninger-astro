@@ -1,0 +1,20 @@
+---
+import type { HTMLAttributes } from 'astro/types';
+import BaseLink from '@components/BaseLink.astro';
+
+interface Props extends HTMLAttributes<'div'> {
+    company: string;
+    url: string;
+    dateRange: string;
+};
+
+const { dateRange, company, url, class: className, ...props } = Astro.props;
+---
+
+<div class:list={['flex flex-row justify-between items-center text-sm mb-1', {...props}]}>
+    <p>{dateRange}</p>
+    <p><BaseLink href={url} target="_blank">{company}</a></p>
+</div>
+<div class="flex flex-row justify-between items-center text-xs text:gray-600 dark:text-gray-500">
+    <slot />
+</div>

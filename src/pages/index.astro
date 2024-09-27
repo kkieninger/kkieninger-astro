@@ -1,7 +1,9 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import BaseHead from '@components/BaseHead.astro';
+import Header from '@components/Header.astro';
+import Footer from '@components/Footer.astro';
+import BaseLink from '@components/BaseLink.astro';
+import JobDescription from '@components/JobDescription.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
 
@@ -10,40 +12,80 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
 	</head>
-	<body>
+	<body class="font-sans bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-400 max-w-xl mx-auto px-4">
 		<Header />
 		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
+			<p class="text-sm mb-10">
+				I&#39;m a frontend software engineer based in Detroit, MI. I&#39;m passionate about leading and mentoring engineering teams, building tools to make other engineers more productive, and delivering high quality features that delight and engage users.
 			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
+			<h2 class="text-lg font-medium mb-2">now</h2>
+			<ul class="mb-6">
+				<li class="mb-3">
+					<JobDescription dateRange="2020 &mdash; Now" company="StockX" url="https://stockx.com">
+						<p>Senior Software Engineer</p>
+						<p>Live marketplace of current culture</p>
+					</JobDescription>
+				</li>
 			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
+			<h2 class="text-lg font-medium mb-2">& then</h2>
+			<ul class="mb-6">
+				<li class="mb-3">
+					<JobDescription dateRange="2018 &mdash; 2020" company="Red Ventures / Bankrate" url="https://bankrate.com">
+						<p>Senior Software Engineer</p>
+						<p>Personal finance and financial tools</p>
+					</JobDescription>
+				</li>
+				<li class="mb-3">
+					<JobDescription dateRange="2015 &mdash; 2020" company="Deep Canvas" url="https://www.linkedin.com/company/deep-canvas/">
+						<p>Frontend Developer</p>
+						<p>Experience design firm for web, mobile, and mixed reality</p>
+					</JobDescription>
+				</li>
+
+				<li class="mb-3">
+					<JobDescription dateRange="2015" company="roundtable6" url="https://roundtable6.com/">
+						<p>Project Management</p>
+						<p>Strategic branding and advertising agency</p>
+					</JobDescription>
+				</li>
+			</ul>
+			<!-- ABOUT -->
+			<div class="mb-6">
+				<h2 class="text-lg font-medium mb-2">about</h2>
+				<h3 class="text-base mb-2">talk to me about...</h3>
+				<p class="text-sm text:gray-600 dark:text-gray-500 mb-4">
+					All things web technologies, but currently my focus has been on leading and empowering product engineering teams, building design systems, and creating engaging user interfaces.
+				</p>
+				<p class="text-sm text:gray-600 dark:text-gray-500 mb-4">
+					Lately, I have been spending most of my time writing TypeScript, React, CSS, Node, and GraphQL.
+				</p>
+
+				<h3 class="text-base mb-2">outside of work...</h3>
+	
+				<p class="text-sm text:gray-600 dark:text-gray-500 mb-2">
+					I'm an avid baseball fan, music fanatic, bibliophile, and sci-fi geek. Lately you can find me unwinding with a good video game, attempting (and failing) to golf, and amassing a board game collection that is actively collecting dust on my shelves.
+				</p>
+				<p class="text-sm text:gray-600 dark:text-gray-500 mb-2">And as for <strong>vices</strong>? i&#39;m a whiskey aficionado, an amateur mixologist and a cocktail enthusiast. &#x1F943;</p>
+			</div>
+
+			<!-- CONTACT -->
+			<div class="mb-6">
+				<h2 class="text-lg font-medium mb-2">get in touch</h2>
+				<ul class="mb-6">
+					<li class="mb-2">
+						<div class="flex flex-row justify-between items-center text-xs">
+							<p class="text:gray-600 dark:text-gray-500">Email</p>
+							<p><BaseLink href="mailto:ktkienin@gmail.com">ktkienin <span class="font-bold">(at)</span> gmail <span class="font-bold">(dot)</span> com</a></p>
+						</div>
+					</li>
+					<li class="mb-2">
+						<div class="flex flex-row justify-between items-center text-xs">
+							<p class="text:gray-600 dark:text-gray-500">LinkedIn</p>
+							<p><BaseLink href="https://www.linkedin.com/in/kkieninger/" target="_blank">/kkieninger</a></p>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</main>
 		<Footer />
 	</body>
