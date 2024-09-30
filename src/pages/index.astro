@@ -1,92 +1,131 @@
 ---
-import BaseHead from '@components/BaseHead.astro';
-import Header from '@components/Header.astro';
-import Footer from '@components/Footer.astro';
-import BaseLink from '@components/BaseLink.astro';
-import JobDescription from '@components/JobDescription.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+import BaseHead from "@components/BaseHead.astro";
+import Header from "@components/Header.astro";
+import Footer from "@components/Footer.astro";
+import BaseLink from "@components/BaseLink.astro";
+import JobDescription from "@components/JobDescription.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="font-sans bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-400 max-w-xl mx-auto px-4">
-		<Header />
-		<main>
-			<p class="text-sm mb-10">
-				I&#39;m a frontend software engineer based in Detroit, MI. I&#39;m passionate about leading and mentoring engineering teams, building tools to make other engineers more productive, and delivering high quality features that delight and engage users.
-			</p>
-			<h2 class="text-lg font-medium mb-2">now</h2>
-			<ul class="mb-6">
-				<li class="mb-3">
-					<JobDescription dateRange="2020 &mdash; Now" company="StockX" url="https://stockx.com">
-						<p>Senior Software Engineer</p>
-						<p>Live marketplace of current culture</p>
-					</JobDescription>
-				</li>
-			</ul>
-			<h2 class="text-lg font-medium mb-2">& then</h2>
-			<ul class="mb-6">
-				<li class="mb-3">
-					<JobDescription dateRange="2018 &mdash; 2020" company="Red Ventures / Bankrate" url="https://bankrate.com">
-						<p>Senior Software Engineer</p>
-						<p>Personal finance and financial tools</p>
-					</JobDescription>
-				</li>
-				<li class="mb-3">
-					<JobDescription dateRange="2015 &mdash; 2020" company="Deep Canvas" url="https://www.linkedin.com/company/deep-canvas/">
-						<p>Frontend Developer</p>
-						<p>Experience design firm for web, mobile, and mixed reality</p>
-					</JobDescription>
-				</li>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body
+    class="font-sans bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-400 max-w-xl mx-auto px-4"
+  >
+    <Header />
+    <main>
+      <p class="text-sm mb-10">
+        I&#39;m a frontend software engineer based in Detroit, MI. I&#39;m
+        passionate about leading and mentoring engineering teams, building tools
+        to make other engineers more productive, and delivering high quality
+        features that delight and engage users.
+      </p>
+      <h2 class="text-lg font-medium mb-2">now</h2>
+      <ul class="mb-6">
+        <li class="mb-3">
+          <JobDescription
+            dateRange="2020 — Now"
+            company="StockX"
+            url="https://stockx.com"
+          >
+            <p>Senior Software Engineer</p>
+            <p>Live marketplace of current culture</p>
+          </JobDescription>
+        </li>
+      </ul>
+      <h2 class="text-lg font-medium mb-2">& then</h2>
+      <ul class="mb-6">
+        <li class="mb-3">
+          <JobDescription
+            dateRange="2018 — 2020"
+            company="Red Ventures / Bankrate"
+            url="https://bankrate.com"
+          >
+            <p>Senior Software Engineer</p>
+            <p>Personal finance and financial tools</p>
+          </JobDescription>
+        </li>
+        <li class="mb-3">
+          <JobDescription
+            dateRange="2015 — 2020"
+            company="Deep Canvas"
+            url="https://www.linkedin.com/company/deep-canvas/"
+          >
+            <p>Frontend Developer</p>
+            <p>Experience design firm for web, mobile, and mixed reality</p>
+          </JobDescription>
+        </li>
 
-				<li class="mb-3">
-					<JobDescription dateRange="2015" company="roundtable6" url="https://roundtable6.com/">
-						<p>Project Management</p>
-						<p>Strategic branding and advertising agency</p>
-					</JobDescription>
-				</li>
-			</ul>
-			<!-- ABOUT -->
-			<div class="mb-6">
-				<h2 class="text-lg font-medium mb-2">about</h2>
-				<h3 class="text-base mb-2">talk to me about...</h3>
-				<p class="text-sm text:gray-600 dark:text-gray-500 mb-4">
-					All things web technologies, but currently my focus has been on leading and empowering product engineering teams, building design systems, and creating engaging user interfaces.
-				</p>
-				<p class="text-sm text:gray-600 dark:text-gray-500 mb-4">
-					Lately, I have been spending most of my time writing TypeScript, React, CSS, Node, and GraphQL.
-				</p>
+        <li class="mb-3">
+          <JobDescription
+            dateRange="2015"
+            company="roundtable6"
+            url="https://roundtable6.com/"
+          >
+            <p>Project Management</p>
+            <p>Strategic branding and advertising agency</p>
+          </JobDescription>
+        </li>
+      </ul>
+      <!-- ABOUT -->
+      <div class="mb-6">
+        <h2 class="text-lg font-medium mb-2">about</h2>
+        <h3 class="text-base mb-2">talk to me about...</h3>
+        <p class="text-sm text:gray-600 dark:text-gray-500 mb-4">
+          All things web technologies, but currently my focus has been on
+          leading and empowering product engineering teams, building design
+          systems, and creating engaging user interfaces.
+        </p>
+        <p class="text-sm text:gray-600 dark:text-gray-500 mb-4">
+          Lately, I have been spending most of my time writing TypeScript,
+          React, CSS, Node, and GraphQL.
+        </p>
 
-				<h3 class="text-base mb-2">outside of work...</h3>
-	
-				<p class="text-sm text:gray-600 dark:text-gray-500 mb-2">
-					I'm an avid baseball fan, music fanatic, bibliophile, and sci-fi geek. Lately you can find me unwinding with a good video game, attempting (and failing) to golf, and amassing a board game collection that is actively collecting dust on my shelves.
-				</p>
-				<p class="text-sm text:gray-600 dark:text-gray-500 mb-2">And as for <strong>vices</strong>? i&#39;m a whiskey aficionado, an amateur mixologist and a cocktail enthusiast. &#x1F943;</p>
-			</div>
+        <h3 class="text-base mb-2">outside of work...</h3>
 
-			<!-- CONTACT -->
-			<div class="mb-6">
-				<h2 class="text-lg font-medium mb-2">get in touch</h2>
-				<ul class="mb-6">
-					<li class="mb-2">
-						<div class="flex flex-row justify-between items-center text-xs">
-							<p class="text:gray-600 dark:text-gray-500">Email</p>
-							<p><BaseLink href="mailto:ktkienin@gmail.com">ktkienin <span class="font-bold">(at)</span> gmail <span class="font-bold">(dot)</span> com</a></p>
-						</div>
-					</li>
-					<li class="mb-2">
-						<div class="flex flex-row justify-between items-center text-xs">
-							<p class="text:gray-600 dark:text-gray-500">LinkedIn</p>
-							<p><BaseLink href="https://www.linkedin.com/in/kkieninger/" target="_blank">/kkieninger</a></p>
-						</div>
-					</li>
-				</ul>
-			</div>
-		</main>
-		<Footer />
-	</body>
+        <p class="text-sm text:gray-600 dark:text-gray-500 mb-2">
+          I'm an avid baseball fan, music fanatic, bibliophile, and sci-fi geek.
+          Lately you can find me unwinding with a good video game, attempting
+          (and failing) to golf, and amassing a board game collection that is
+          actively collecting dust on my shelves.
+        </p>
+        <p class="text-sm text:gray-600 dark:text-gray-500 mb-2">
+          And as for <strong>vices</strong>? i&#39;m a whiskey aficionado, an
+          amateur mixologist and a cocktail enthusiast. &#x1F943;
+        </p>
+      </div>
+
+      <!-- CONTACT -->
+      <div class="mb-6">
+        <h2 class="text-lg font-medium mb-2">get in touch</h2>
+        <ul class="mb-6">
+          <li class="mb-2">
+            <div class="flex flex-row justify-between items-center text-xs">
+              <p class="text:gray-600 dark:text-gray-500">Email</p>
+              <p>
+                <BaseLink href="mailto:ktkienin@gmail.com"
+                  >ktkienin <span class="font-bold">(at)</span> gmail <span
+                    class="font-bold">(dot)</span
+                  > com</BaseLink>
+              </p>
+            </div>
+          </li>
+          <li class="mb-2">
+            <div class="flex flex-row justify-between items-center text-xs">
+              <p class="text:gray-600 dark:text-gray-500">LinkedIn</p>
+              <p>
+                <BaseLink
+                  href="https://www.linkedin.com/in/kkieninger/"
+                  target="_blank">/kkieninger</BaseLink>
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </html>
